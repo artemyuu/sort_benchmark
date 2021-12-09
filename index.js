@@ -22,6 +22,8 @@ const products = [
     filteredArrays[item.cat].push(item); 
   }) 
   return filters.reduce( (acc, filter) => acc.concat(filteredArrays[filter]), [] ); //f*n
+                                                                                    //где n - эл массива
+                                                                                    //f - кол-во фильтров
 }
 
 const sortFn2 = (arr, filters) => {
@@ -33,6 +35,7 @@ const sortFn2 = (arr, filters) => {
                                                                     //n + f (в лучшем случае);
                                                                    //n^2 + f (в худшем);
 }
+
 
 //=======================================BENCHMARK=======================================//
 
